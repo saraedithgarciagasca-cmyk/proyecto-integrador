@@ -1,0 +1,17 @@
+# Entorno virtual
+.venv/
+venv/
+
+# Archivos temporales de Python
+__pycache__/
+*.pyc
+
+# Configuración local del editor
+.vscode/
+
+# Credenciales y variables de entorno
+.env
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
