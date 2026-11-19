@@ -71,6 +71,18 @@ Los valores de cada fila de las tablas de iteraciones y los errores también coi
 | Objetivo | Verificar la regla de dominancia diagonal: aviso al usuario y comportamiento del método cuando no converge. |
 | Entradas | Opción 1, $n = 2$: $x_1 + 5x_2 = 6$; $7x_1 + x_2 = 8$. Opción 3 y opción 4 con tolerancia = 0.0001 e iteraciones máximas = 10. |
 | Resultado esperado | "NO es diagonalmente dominante", aviso antes de resolver, tabla de 10 iteraciones con valores que crecen y mensaje "No convergió en 10 iteraciones". |
-| Resultado obtenido | Se muestran el aviso y el mensaje "No convergió en 10 iteraciones", pero en las iteraciones 8 a 10 las columnas de la tabla aparecen pegadas (por ejemplo `-1500624.000000-1500624.000000...`) y no se pueden leer. |
-| Estado | Falla |
-| Observaciones | La regla funciona, pero el formato de la tabla no separa columnas cuando los números tienen más de 14 caracteres. Evidencia: `prueba_05_regla_dominancia.png`. |
+| Resultado obtenido | **Primera ejecución:** se mostraron el aviso y el mensaje "No convergió en 10 iteraciones", pero en las iteraciones 8 a 10 las columnas de la tabla aparecían pegadas (por ejemplo `-1500624.000000-1500624.000000...`) y no se podían leer. **Después de la corrección:** "NO es diagonalmente dominante", aviso antes de resolver, tabla de 10 iteraciones con columnas separadas (iteración 10: $x_1 = -52521874$, $x_2 = -52521874$) y mensaje "No convergió en 10 iteraciones". |
+| Estado | Correcto (después de corregir) |
+| Observaciones | Error detectado: el formato `>14.6f` no deja espacio entre columnas cuando un número ocupa más de 14 caracteres. Corrección: en `mostrar_tabla()` se agregó un espacio fijo antes de cada columna (también se actualizó la especificación) y se volvieron a ejecutar todos los casos con los mismos resultados. Evidencia: `prueba_05_regla_dominancia.png`. |
+
+---
+
+## Resumen
+
+| Caso | Descripción | Estado |
+|---|---|---|
+| CP-01 | Caso original con resultado conocido | Correcto |
+| CP-02 | Caso normal adicional (4 × 4) | Correcto |
+| CP-03 | Caso límite ($n = 2$, 1 iteración) | Correcto |
+| CP-04 | Entradas inválidas | Correcto |
+| CP-05 | Regla de dominancia diagonal / no convergencia | Correcto (después de corregir) |

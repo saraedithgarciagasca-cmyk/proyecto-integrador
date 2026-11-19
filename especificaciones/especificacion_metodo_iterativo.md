@@ -101,7 +101,7 @@ $$
 | Objetivo | Construir la tabla de iteraciones. |
 | Entradas | Ninguna. |
 | Atributos utilizados | `iteraciones`, `sistema.n` |
-| Algoritmo | Si `iteraciones` está vacía → devolver `"No se ha resuelto el sistema."`. Si no, armar un encabezado `k, x1, ..., xn, Error` y una línea por iteración con los valores redondeados a 6 decimales. |
+| Algoritmo | Si `iteraciones` está vacía → devolver `"No se ha resuelto el sistema."`. Si no, armar un encabezado `k, x1, ..., xn, Error` y una línea por iteración con los valores redondeados a 6 decimales. Cada columna va precedida por un espacio fijo para que las columnas no se peguen cuando los números son muy grandes. |
 | Resultado | `str` |
 | Validaciones | Lista vacía. |
 

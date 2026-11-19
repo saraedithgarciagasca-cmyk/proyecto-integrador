@@ -108,16 +108,16 @@ class MetodoIterativo:
         n = self.sistema.n
         encabezado = f"{'k':>4}"
         for i in range(n):
-            encabezado += f"{'x' + str(i + 1):>14}"
-        encabezado += f"{'Error':>14}"
+            encabezado += " " + f"{'x' + str(i + 1):>14}"
+        encabezado += " " + f"{'Error':>14}"
 
         lineas = [f"Tabla de iteraciones - {self.nombre_metodo}",
                   encabezado, "-" * len(encabezado)]
         for registro in self.iteraciones:
             linea = f"{registro['k']:>4}"
             for valor in registro["x"]:
-                linea += f"{valor:>14.6f}"
-            linea += f"{registro['error']:>14.6f}"
+                linea += " " + f"{valor:>14.6f}"
+            linea += " " + f"{registro['error']:>14.6f}"
             lineas.append(linea)
         return "\n".join(lineas)
 
