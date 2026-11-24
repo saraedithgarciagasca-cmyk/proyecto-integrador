@@ -115,9 +115,9 @@ $$
 
 **Dominancia diagonal:**
 
-- Renglón 1: $|3| > |-0.1| + |-0.2| = 0.3$ ✔
-- Renglón 2: $|7| > |0.1| + |-0.3| = 0.4$ ✔
-- Renglón 3: $|10| > |0.3| + |-0.2| = 0.5$ ✔
+- Renglón 1: $|3| > |-0.1| + |-0.2| = 0.3$ 
+- Renglón 2: $|7| > |0.1| + |-0.3| = 0.4$ 
+- Renglón 3: $|10| > |0.3| + |-0.2| = 0.5$ 
 
 El sistema es diagonalmente dominante, por lo que ambos métodos convergen.
 
