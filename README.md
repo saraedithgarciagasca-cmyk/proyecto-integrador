@@ -2,7 +2,7 @@
 
 Proyecto Integrador — Programación II · Universidad Iberoamericana
 
-**Alumna:** Sara García
+**Alumna:** Sara Edith García Gasca 
 
 ## Descripción
 
